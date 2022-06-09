@@ -10,24 +10,28 @@ body {
     color: black;
     background-image: linear-gradient(lightskyblue, gainsboro);
     /* linear-gradient(#39312b, #857264); */
+    background-repeat: repeat-x;
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Computer component styles */
 
 .computer {
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 .screen {
     margin: 2rem auto 0;
     width: 80%;
-    height: 80%;
-    min-width: min-content;
-    min-height: 10rem;
-    max-height: 28rem;
+    height: 80%; 
+    min-height: 80%;
+    max-height: 80%;
     border: 20px solid black;
     background-color: white;
     overflow-y: scroll;
@@ -37,13 +41,20 @@ body {
 
 .base {
     width: 8rem;
-    height: 3rem;
+    height: 2rem;
     background-color: black;
     -webkit-background-clip: content-box;
     background-clip: content-box;
     border-right: 16rem solid transparent;
     border-left: 16rem solid transparent;
     border-bottom: 2rem solid black;
+    flex-shrink: 0;
+}
+
+.table {
+    background-image: linear-gradient(gray, #444);
+    width: 100vw;
+    height: 50vh;
 }
 
 /* Home screen styles */
@@ -57,9 +68,10 @@ header {
 }
 
 header h1 {
-    font-size: 8rem;
-    margin: 3rem 0 0;
+    font-size: 10vw;
+    margin-top: 12vh;
     text-shadow: -5px 5px lightblue;
+    max-width: 100%;
 }
 
 header h3 {
@@ -68,6 +80,7 @@ header h3 {
 
 header a {
     width: 80%;
+    margin: 1rem;
 }
 
 header button {
@@ -75,7 +88,6 @@ header button {
     color: #333333;
     border: 1px solid gainsboro;
     padding: 10px;
-    margin: 1rem;
     width: 80%;
     text-align: left;
     display: inline-block;
@@ -97,7 +109,7 @@ button:hover {
 /* Nav styles*/
 
 nav {
-    margin: 1rem 0;
+    margin-top: 0.5rem;
     display: flex;
     flex-flow: column;
 }
@@ -113,7 +125,6 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
-
 }
 
 nav a:hover {
@@ -127,17 +138,16 @@ main {
 }
 
 #main {
-    margin-top: 10rem;
-    padding: 10px 20px 20px;
+    margin-top: 40vh;
 }
 
-main h2 {
+#main h2 {
     margin: 1rem 0;
-    font-size: 1.5rem;
 }
 
 .main-results {
     margin: 1rem 0;
+    color: #4a4a4a;
 }
 
 .main-results a {
@@ -153,6 +163,46 @@ main h2 {
     color: lightskyblue;
 }
 
+/* Content pages styles*/
+
+.subtitle {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2rem;
+    margin: 0.25rem 0;
+    text-align: center;
+    border-bottom: 5px solid lightblue;
+    color: black;
+}
+
+.content h2 {
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: underline dashed lightblue;
+}
+
+.content h3 {
+    padding: 0.75rem 0 0.25rem;
+}
+
+.content p {
+    color: #4a4a4a;
+}
+
+.content p a {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.content p a:hover {
+    color: black;
+}
+
+.content p a::after {
+    color: lightblue;
+}
 
 footer {
     text-align: center;
@@ -160,14 +210,60 @@ footer {
     width: 100%;
     z-index: 1;
     color: black;
+    
 }
 
 footer a {
     color: black;
     text-decoration: none;
     cursor: pointer;
+    padding: 0 0.5rem;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 686px) {
+
+    .screen {
+        min-height: 80%;
+        max-height: 80%;
+    }
+    
+    .base {
+        width: 6rem;
+        height: 1rem;
+        border-right: 16rem solid transparent;
+        border-left: 16rem solid transparent;
+        border-bottom: 2rem solid black;
+    }
+
+    header h1 {
+        font-size: 4rem;
+        margin-top: 3rem;
+        text-shadow: -3px 3px lightblue;
+    }
+
+    header button {
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    button img {
+        width: 1rem;
+        padding: 0 0.5rem 0 0.5rem;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    header h1 {
+        margin-top: 30vw;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 775px) and (max-width: 537px){
+    header h1 {
+        margin-top: 15vw;
+    }
 }
