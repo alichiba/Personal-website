@@ -3,7 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Nunito', 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -68,6 +68,7 @@ header {
 }
 
 header h1 {
+    font-family: 'Nunito', sans-serif;
     font-size: 10vw;
     margin-top: 12vh;
     text-shadow: -5px 5px lightblue;
@@ -85,6 +86,7 @@ header a {
 }
 
 header button {
+    font-family: 'Nunito', sans-serif;
     background-color: white;
     color: #333333;
     border: 1px solid gainsboro;
@@ -117,6 +119,7 @@ nav {
 }
 
 .nav-logo {
+    font-family: 'Nunito', sans-serif;
     color: black;
     text-decoration: none;
     font-weight: bold;
