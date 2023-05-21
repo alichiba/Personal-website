@@ -15,8 +15,6 @@ body {
     overflow: hidden;
 }
 
-<<<<<<< HEAD
-=======
 .plant img {
     width: 100px;
     height: auto;
@@ -25,7 +23,6 @@ body {
     left: 10px;
 
 }
->>>>>>> 7c37611 (may update title pages)
 /* Computer component styles */
 
 .computer {
@@ -45,18 +42,12 @@ body {
     max-height: 80%;
     border: 20px solid black;
     background-color: white;
-<<<<<<< HEAD
-    overflow-y: scroll;
-    position: relative;
-    border-radius: 1rem;
-=======
     overflow-y: auto;
     position: relative;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
     flex: 1;
->>>>>>> 7c37611 (may update title pages)
 }
 
 .base {
@@ -95,11 +86,7 @@ header h1 {
     max-width: 100%;
 }
 
-<<<<<<< HEAD
-header h3 {
-=======
 header h2, h3 {
->>>>>>> 7c37611 (may update title pages)
     color: #333333;
 }
 
@@ -115,15 +102,9 @@ header button {
     color: #333333;
     border: 1px solid gainsboro;
     padding: 10px;
-<<<<<<< HEAD
-    width: 80%;
-    text-align: left;
-    display: flexbox;
-=======
     width: 100%;
     text-align: left;
     display: flex;
->>>>>>> 7c37611 (may update title pages)
     align-items: center;
     font-size: 2rem;
     border-radius: 2rem;
@@ -132,11 +113,7 @@ header button {
 button img {
     width: 2.5rem;
     height: auto;
-<<<<<<< HEAD
-    padding: 0 2rem 0 1rem;
-=======
     padding: 0 3rem 0 1rem;
->>>>>>> 7c37611 (may update title pages)
 }
 
 button:hover {
@@ -144,8 +121,6 @@ button:hover {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
 .typewriter {
     font-family: 'Nunito', sans-serif;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -171,7 +146,6 @@ button:hover {
     50% { border-color: black; }
   }
 
->>>>>>> 7c37611 (may update title pages)
 /* Nav styles*/
 
 nav {
@@ -205,11 +179,7 @@ main {
 }
 
 #main {
-<<<<<<< HEAD
-    margin-top: 40vh;
-=======
     margin-top: 1.5rem;
->>>>>>> 7c37611 (may update title pages)
 }
 
 #main h2 {
@@ -281,11 +251,7 @@ footer {
     width: 100%;
     z-index: 1;
     color: black;
-<<<<<<< HEAD
-    
-=======
     margin-top: auto;
->>>>>>> 7c37611 (may update title pages)
 }
 
 footer a {
