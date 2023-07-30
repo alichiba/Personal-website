@@ -170,6 +170,7 @@ nav {
     font-weight: bold;
     text-shadow: -2px 2px lightblue;
     font-size: 2rem;
+    width: -moz-fit-content;
     width: fit-content;
     transition: transform 0.2s ease-in-out;
 }
