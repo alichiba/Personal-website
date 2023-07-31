@@ -243,6 +243,11 @@ main {
     text-align: center;
 }
 
+#subtitle-high{
+    text-align: center;
+    color: lightblue;
+}
+
 .content h1 {
     font-size: 2rem;
     margin: 0.25rem 0;
@@ -282,7 +287,6 @@ footer {
     text-align: center;
     background-color: lightblue;
     width: 100%;
-    z-index: 1;
     color: black;
     margin-top: auto;
     display: flex;
@@ -336,6 +340,21 @@ footer a:hover {
 @media only screen and (orientation: portrait) {
     header h1 {
         margin-top: 30vw;
+    }
+
+    .plant img {
+        width: 70px;
+    }
+    
+    .cup img {
+        width: 70px;
+    }
+
+    .subtitle {
+        text-align: left;
+    }
+    #subtitle-high{
+        text-align: left;
     }
 }
 
