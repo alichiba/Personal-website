@@ -15,6 +15,7 @@ body {
     overflow: hidden;
 }
 
+
 .plant img {
     width: 100px;
     height: auto;
@@ -179,6 +180,20 @@ nav {
     transform: scale(1.1);
 }
 
+.nav-return {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-return:hover {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.nav-return::after {
+    color: lightblue;
+}
+
 /* Search screen styles */
 
 main {
@@ -259,7 +274,7 @@ main {
     color: black;
 }
 
-.content p a::after {
+a::after {
     color: lightblue;
 }
 
