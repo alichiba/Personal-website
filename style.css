@@ -1,0 +1,365 @@
+/* General styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: black;
+    background-image: linear-gradient(lightskyblue, gainsboro);
+    /* linear-gradient(#39312b, #857264); */
+    background-repeat: repeat-x;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.plant img {
+    width: 100px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    z-index: 1;
+}
+
+.cup img {
+    width: 100px;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    z-index: 1;
+}
+/* Computer component styles */
+
+.computer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.screen {
+    margin: 2rem auto 0;
+    width: 80%;
+    height: 80%; 
+    min-height: 80%;
+    max-height: 80%;
+    border: 20px solid black;
+    background-color: white;
+    overflow-y: auto;
+    position: relative;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.base {
+    width: 8rem;
+    height: 2rem;
+    background-color: black;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+    border-right: 16rem solid transparent;
+    border-left: 16rem solid transparent;
+    border-bottom: 2rem solid black;
+    flex-shrink: 0;
+}
+
+.table {
+    background-image: linear-gradient(gray, #444);
+    width: 100vw;
+    height: 50vh;
+}
+
+/* Home screen styles */
+
+header {
+    display: flex;
+    padding: 10px 20px 20px;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 10vw;
+    margin-top: 12vh;
+    text-shadow: -5px 5px lightblue;
+    max-width: 100%;
+}
+
+header h2, h3 {
+    color: #333333;
+}
+
+header a {
+    width: 80%;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+header button {
+    font-family: 'Nunito', sans-serif;
+    background-color: white;
+    color: #333333;
+    border: 1px solid gainsboro;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+
+button img {
+    width: 2.5rem;
+    height: auto;
+    padding: 0 3rem 0 1rem;
+}
+
+button:hover {
+    box-shadow: 0px 0px 10px gainsboro;
+    cursor: pointer;
+}
+
+.typewriter {
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid black; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto 0 0;
+    /* letter-spacing: .15em; Adjust as needed */
+    max-width: min-content;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+  }
+
+/* Nav styles*/
+
+nav {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-flow: column;
+}
+
+.nav-logo {
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: -2px 2px lightblue;
+    font-size: 2rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-return {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-return:hover {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.nav-return::after {
+    color: lightblue;
+}
+
+/* Search screen styles */
+
+main {
+    padding: 10px 20px 20px;
+}
+
+#main {
+    margin-top: 1.5rem;
+}
+
+#main h2 {
+    margin: 1rem 0;
+}
+
+.main-results {
+    margin: 1rem 0;
+    color: #4a4a4a;
+    width: 80%;
+}
+
+.main-results a {
+    font-size: 20px;
+    line-height: 2;
+    color: black;
+    text-decoration: none;
+}
+
+.main-results a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: lightskyblue;
+}
+
+.tabbox {
+    display: flex;
+    align-items: center;
+}
+
+.tab {
+    width: 40px;
+    height: 40px;
+}
+
+/* Content pages styles*/
+
+.subtitle {
+    text-align: center;
+}
+
+#subtitle-high{
+    text-align: center;
+    color: lightblue;
+}
+
+.content h1 {
+    font-size: 2rem;
+    margin: 0.25rem 0;
+    text-align: center;
+    border-bottom: 5px solid lightblue;
+    color: black;
+}
+
+.content h2 {
+    margin-top: 1rem;
+    text-align: center;
+    text-decoration: underline dashed lightblue;
+}
+
+.content h3 {
+    padding: 0.75rem 0 0.25rem;
+}
+
+.content p {
+    color: #4a4a4a;
+}
+
+.content p a {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.content p a:hover {
+    color: black;
+}
+
+a::after {
+    color: lightblue;
+}
+
+footer {
+    text-align: center;
+    background-color: lightblue;
+    width: 100%;
+    color: black;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0.3rem 0.5rem 0rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 686px) {
+
+    .screen {
+        min-height: 80%;
+        max-height: 80%;
+    }
+    
+    .base {
+        width: 6rem;
+        height: 1rem;
+        border-right: 16rem solid transparent;
+        border-left: 16rem solid transparent;
+        border-bottom: 2rem solid black;
+    }
+
+    header h1 {
+        font-size: 4rem;
+        margin-top: 3rem;
+        text-shadow: -3px 3px lightblue;
+    }
+
+    header button {
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    button img {
+        width: 1rem;
+        padding: 0 0.5rem 0 0.5rem;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    header h1 {
+        margin-top: 30vw;
+    }
+
+    .plant img {
+        width: 70px;
+    }
+    
+    .cup img {
+        width: 70px;
+    }
+
+    .subtitle {
+        text-align: left;
+    }
+    #subtitle-high{
+        text-align: left;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-height: 775px) and (max-width: 537px){
+    header h1 {
+        margin-top: 10vw;
+    }
+}
