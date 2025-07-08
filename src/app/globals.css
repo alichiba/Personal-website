@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom styles that can't be easily converted to Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Poppins:wght@200;400;700&display=swap');
+
+/* Custom animations that need to be preserved */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom base styles */
+* {
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(lightskyblue, gainsboro);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23a)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
+
+/* Custom component styles that need specific CSS */
+.base {
+  width: 8rem;
+  height: 2rem;
+  background-color: black;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+  border-right: 16rem solid transparent;
+  border-left: 16rem solid transparent;
+  border-bottom: 2rem solid black;
+}
+
+.table {
+  background-image:
+    radial-gradient(ellipse at center top, #bbb 20%, #444 100%);
+}
+
+/* Typewriter animation */
+.typewriter {
+  font-family: 'Nunito', sans-serif;
+  overflow: hidden;
+  border-right: .10em solid black;
+  white-space: nowrap;
+  margin: 0 auto 0 0;
+  max-width: min-content;
+  animation: 
+    typing 6s steps(40, end),
+    blink-caret 1s step-end infinite;
+}
+
+/* Custom content styles */
+.content h1 {
+  border-bottom: 2px solid skyblue;
+}
+
+/* Custom footer background */
+footer {
+  background-color: skyblue;
+}
+
+/* Custom Tailwind utilities */
+@layer utilities {
+  .text-10vw {
+    font-size: 10vw;
+  }
+  
+  .mt-12vh {
+    margin-top: 12vh;
+  }
+  
+  .border-5 {
+    border-width: 20px;
+  }
+  
+  .w-4\/5 {
+    width: 80%;
+  }
+  
+  .h-4\/5 {
+    height: 80%;
+  }
+  
+  .min-h-4\/5 {
+    min-height: 80%;
+  }
+  
+  .max-h-4\/5 {
+    max-height: 80%;
+  }
+  
+  .h-1\/2 {
+    height: 50vh;
+  }
+  
+  .font-nunito {
+    font-family: 'Nunito', sans-serif;
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 686px) {
+  .base {
+    border-right: 16rem solid transparent;
+    border-left: 16rem solid transparent;
+    border-bottom: 2rem solid black;
+  }
+  
+  .header-title {
+    text-shadow: -3px 3px lightblue;
+  }
+} 
